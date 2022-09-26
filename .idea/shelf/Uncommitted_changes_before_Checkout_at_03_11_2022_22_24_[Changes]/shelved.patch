@@ -1,0 +1,50 @@
+Index: src/BmiCalculator.java
+===================================================================
+diff --git a/src/BmiCalculator.java b/src/BmiCalculator.java
+--- a/src/BmiCalculator.java	
++++ b/src/BmiCalculator.java	
+@@ -4,13 +4,20 @@
+ */
+ import java.util.Scanner;
+ public class BmiCalculator {
+-    public static void main(String args[]){
+-        Scanner sc = new Scanner(System.in);
+-        System.out.println( "Enter weight in kilograms:\n");
+-        double weight= sc.nextInt();
+-        System.out.println("Enter height in meters:\n");
+-        double height= sc.nextInt();
+-        double BMI=weight/(height*height);
+-        System.out.println("\n The Body Mass Index is" +BMI+"kg/m2");
++    public static String bmicalculator(double weight, double height){
++        double bmi= weight/(height*height);
++        if (bmi<18.5)
++            return "Thinness";
++        else if (bmi<25)
++            return "Normal";
++        else if (bmi<30)
++            return "Overweight";
++        else
++            return ("Obese");
+     }
+-}
++    public static void main(String[]args){
++        double weightInKg=0.0f;
++        double heightInMeters=0.0f;
++        
++    }
++}
+\ No newline at end of file
+Index: src/Main.java
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	
++++ b/src/Main.java	
+@@ -1,6 +1,6 @@
+ public class Main {
+     public static void main(String[] args) {
+ 
+-        System.out.println("Hello world!");
++        System.out.println("judy chepkirui");
+     }
+ }
+\ No newline at end of file
